@@ -17,7 +17,7 @@ function sortString(str1, str2){
 longerString.sort(sortString);
 
 console.log(longerString);
-*/
+
 
 var nameAndEmails = []
     var person1 = {
@@ -79,3 +79,15 @@ nameAndEmails.sort(sortEmailAlphabetically);
 console.log("sorted alphabetically by email: ");
 console.log(nameAndEmails);
 
+*/
+
+
+var arrayOfNumbers = [1,2,3,4,5,6, 7, 8, 9, 10, 20, 40];
+
+function returnSquare(num){
+    return num*num;
+}
+
+arrayOfNumbers = arrayOfNumbers.map(returnSquare);
+
+console.log(arrayOfNumbers)
