@@ -79,7 +79,6 @@ nameAndEmails.sort(sortEmailAlphabetically);
 console.log("sorted alphabetically by email: ");
 console.log(nameAndEmails);
 
-*/
 
 
 var arrayOfNumbers = [1,2,3,4,5,6, 7, 8, 9, 10, 20, 40];
@@ -90,4 +89,41 @@ function returnSquare(num){
 
 arrayOfNumbers = arrayOfNumbers.map(returnSquare);
 
-console.log(arrayOfNumbers)
+console.log(arrayOfNumbers);
+
+*/
+
+var nameAndEmailsAndNumbers = []
+    var person1 = {
+        name: "jimmyson",
+        email: "zzjim@rogers.com",
+        num: 22
+    }
+    var person2 = {
+        name:"bill",
+        email: "FFbill@rogers.com",
+        num: 24
+    }
+    var person3 = {
+        name: "steve",
+        email: "steve_wakowski@stuff.ca",
+        num: 11
+    }
+    var person4 = {
+        name: "franklinwilliams",
+        email: "FFAfrank_williamson@gs.ca",
+        num: 10
+    }
+
+    nameAndEmailsAndNumbers.push(person1);
+    nameAndEmailsAndNumbers.push(person2);
+    nameAndEmailsAndNumbers.push(person3);
+    nameAndEmailsAndNumbers.push(person4);
+    
+function returnSquare(a){
+    return a.num * a.num;
+} 
+
+var squaredNum = nameAndEmailsAndNumbers.map(returnSquare);
+
+console.log(squaredNum);
