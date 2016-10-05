@@ -91,7 +91,7 @@ arrayOfNumbers = arrayOfNumbers.map(returnSquare);
 
 console.log(arrayOfNumbers);
 
-*/
+
 
 var nameAndEmailsAndNumbers = []
     var person1 = {
@@ -127,3 +127,38 @@ function returnSquare(a){
 var squaredNum = nameAndEmailsAndNumbers.map(returnSquare);
 
 console.log(squaredNum);
+*/
+
+
+function operationMaker(str){
+    if (str == "add"){
+        return function(num1, num2){
+            return ("the sum is: " + (num1+num2));
+        }
+    }
+    else if (str == "subtract"){
+        return function(num1, num2){
+            return ("the difference is: " + (num1-num2));
+        }
+    }
+    else if (str == "mult"){
+        return function(num1,num2){
+            return ("the product is: " + (num1*num2));
+        }
+    }
+    else if (str == "div"){
+        return function(num1,num2){
+            return ("the ratio is: " + (num1/num2));
+            
+        }
+    }
+    else{
+        console.log("screwed up somewhere");
+    }
+}
+
+var whatToDoMathematically = operationMaker("div");
+var theAnswer = whatToDoMathematically(4444,22);
+console.log(theAnswer);
+
+
