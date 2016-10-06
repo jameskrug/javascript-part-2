@@ -25,34 +25,35 @@ function Map(width, height){
             }
         }
     }
+    //display the world map
+    console.log("The World Map")
+    for (var m = 1; m <= width; m ++){
+        var theLine = "";
+        for (var n = 1; n <= height; n++){
+            theLine = theLine + " " + this.tiles[m][n].type;
+        }
+    console.log(theLine);
+    }    
+    
+    console.log("The Walkable Map:")
+    for (var m = 1; m <= width; m ++){
+        var theLine = "";
+        for (var n = 1; n <= height; n++){
+            if (this.tiles[m][n].type == "~"){
+                theLine = theLine + " O";
+            }
+            else{
+                theLine = theLine + " X"; 
+            }
+        }
+    console.log(theLine);
+    }
 }
 
 var height = 40;
 var width = 40;
 var world1 = new Map(width,height);
 
-console.log("The World Map")
-for (var m = 1; m <= width; m ++){
-    
-    var theLine = "";
-    for (var n = 1; n <= height; n++){
-        theLine = theLine + " " + world1.tiles[m][n].type;
-    }
-    console.log(theLine);
-}
 
-console.log("The Walkable Map:")
-for (var m = 1; m <= width; m ++){
-    
-    var theLine = "";
-    for (var n = 1; n <= height; n++){
-        if (world1.tiles[m][n].type == "~"){
-            theLine = theLine + " O";
-        }
-        else{
-            theLine = theLine + " X"; 
-        }
-    }
-    console.log(theLine);
-}
+
 
